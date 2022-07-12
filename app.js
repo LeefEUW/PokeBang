@@ -2,7 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             pvPlayer: 100,
-            pvEnnemy: 100
+            pvEnemy: 100
         };
     },
     methods: {
@@ -13,7 +13,7 @@ const app = Vue.createApp({
 
         },
         soinPlayer() {
-
+            math.random
         },
         ennemyAttack() {
 
