@@ -1,39 +1,48 @@
 const app = Vue.createApp({
     data() {
         return {
-<<<<<<< HEAD
-            pvPlayer: 1500,
-            pvEnnemy: 1500
-=======
             pvPlayer: 100,
-            pvEnemy: 100
->>>>>>> 8c541719e63277754371bf96fffee89227de0d4c
+            pvEnnemy: 100,
+            pv : 0,
+            round : 0,
+            
+            
+            
         };
     },
     methods: {
-        attack(num1,num2) {
-           this.pvEnnemy -= num1;
-           this.pvPlayer -= num2;
+        calcul(min, max) { // min and max included 
+            pv= Math.floor(Math.random() * (max - min + 1) + min)
+          },
+          
+          
+          
+        attack() {
+           this.pvEnnemy -= pv;
+           this.pvPlayer -= pv+1;
+           this.round +=1;
         },
         
-        attackSpePlayer() {
+        attackSp() {
+            if (this.round %3 == 0) {
+                this.pvEnnemy -= pv;
+                this.pvPlayer -= Math.floor(Math.random() * (10 - 5 + 1) + 5);
+                this.round +=1 ;
+            }
+
 
         },
         soinPlayer() {
-<<<<<<< HEAD
-           this.pvPlayer = Math.floor(Math.random() * 1500) + 20;
+           this.pvPlayer += pv;
+           this.pvPlayer -= Math.floor(Math.random() * (10 - 5 + 1) + 5);
+           this.round +=1;
                 
-=======
-            math.random
-        },
-        ennemyAttack() {
-
->>>>>>> 8c541719e63277754371bf96fffee89227de0d4c
         },
         
        
     
         giveUp() {
+            location.href= "https://www.youtube.com/watch?v=QkR_5mB9UKw";
 
         }
     }
