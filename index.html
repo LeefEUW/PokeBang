@@ -10,26 +10,35 @@
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 
+		</div>
+
 <body id="app">
     <header>
         <h1 id="nom">Pokebang</h1>
     </header>
     <div id="ennemy">
         <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="{{pvEnnemy}}" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+             role="progressbar" v-bind:aria-valuenow="pvEnnemy" aria-valuemin="0" 
+             aria-valuemax="1500" :style="{width: pvEnnemy + 'px'}"></div>
         </div>
         <br>
     </div>
     <div id="player">
         <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="{{pvPlayer}}" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" 
+            role="progressbar" v-bind:aria-valuenow="pvPlayer" 
+            aria-valuemin="0" aria-valuemax="1500" :style="{width: pvPlayer + 'px'}"></div>
         </div>
     </div>
-
-    <button>Attaquer</button>
-    <button>Attaque spéciale</button>
-    <button>Soigner</button>
-    <button>Abandonner</button>
+<div class="boutton1">
+    <button id="att" @click="attack(40,50)">Attaquer</button>
+    <button id="attSp">Attaque spéciale</button>
+</div>
+<div class="boutton2">
+    <button id="soi" @click="soinPlayer">Soigner</button>
+    <button id="abd">Abandonner</button>
+</div>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3 "></script>

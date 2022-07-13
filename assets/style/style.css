@@ -2,5 +2,40 @@
 #nom {
     text-align: center;
     font-family: pokemon solid;
-    color: ;
+    color: rgb(0, 89, 255);
+    background-color: yellow;
 }
+.boutton1{
+    display: flex;
+    margin-top:50px;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    
+}
+.boutton2{
+    display: flex;
+    margin-top:50px;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+.boutton1 #att{
+    background-color: aqua;
+    border-radius: 1rem;
+}
+.boutton1 #attSp{
+    background-color: aqua;
+    border-radius: 1rem;
+}
+.boutton2 #soi{
+    background-color: aqua;
+    border-radius: 1rem;
+}
+.boutton2 #abd{
+    background-color: aqua;
+    border-radius: 1rem;
+}
+
+
+

@@ -1,23 +1,26 @@
 const app = Vue.createApp({
     data() {
         return {
-            pvPlayer: 100,
-            pvEnnemy: 100
+            pvPlayer: 1500,
+            pvEnnemy: 1500
         };
     },
     methods: {
-        attackPlayer() {
-
+        attack(num1,num2) {
+           this.pvEnnemy -= num1;
+           this.pvPlayer -= num2;
         },
+        
         attackSpePlayer() {
 
         },
         soinPlayer() {
-
+           this.pvPlayer = Math.floor(Math.random() * 1500) + 20;
+                
         },
-        ennemyAttack() {
-
-        },
+        
+       
+    
         giveUp() {
 
         }
