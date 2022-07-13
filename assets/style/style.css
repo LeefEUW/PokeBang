@@ -10,35 +10,47 @@
     letter-spacing: 3px;
 }
 
+#container {
+    display: flex;
+}
+
 #player {
     width: 90%;
-    background-color: rgb(237, 250, 247);
+    margin: auto;
+    background-color: rgb(230, 247, 226);
     text-align: center;
     box-shadow: 0px 3px 7px 5px rgba(0, 0, 0, 0.31);
     padding: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#versus {
+    text-align: center;
 }
 
 #enemy {
+    margin-top: 20px;
     width: 90%;
-    background-color: coral;
+    margin: auto;
+    background-color: rgb(245, 207, 207);
     box-shadow: 0px 3px 7px 5px rgba(0, 0, 0, 0.31);
     text-align: center;
+    padding: 20px;
 }
 
 .boutton1 {
     display: flex;
-    margin-top: 50px;
     justify-content: center;
-    align-items: center;
     width: 100%;
+    gap: 70px;
 }
 
 .boutton2 {
     display: flex;
-    margin-top: 50px;
     justify-content: center;
-    align-items: center;
     width: 100%;
+    gap: 70px;
 }
 
 .boutton1 #att {
@@ -63,7 +75,8 @@
 
 #imgEnemy {
     width: 200px;
-    height: 300;
+    height: 300px;
+    margin-bottom: 10px;
 }
 
 #player img {
