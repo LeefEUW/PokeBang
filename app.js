@@ -5,7 +5,7 @@ const app = Vue.createApp({
             pvEnnemy: 100,
             pv: 0,
             round: 1,
-
+            boutton : true
 
 
         };
@@ -44,6 +44,15 @@ const app = Vue.createApp({
 
         giveUp() {
             location.href = "https://www.youtube.com/watch?v=QkR_5mB9UKw";
+        },
+
+        cacher(){
+            if (this.pvPlayer<= 0) {
+                this.boutton = false;
+            }
+            else if (this.pvEnnemy<= 0){
+                this.boutton = false;
+            }
         }
     }
 });
