@@ -16,30 +16,32 @@
     <header>
         <h1 id="nom">Pokebang</h1>
     </header>
-    <div v-if="pvEnnemy <= 0">
-        <img src="./assets/img/Victory.gif" alt="GG ! ">
-    </div>
-    <div id="ennemy" v-else>
-        <img id="imgEnemy" src="./assets/img/IMG_20220712_122410.jpg">
-        <h3>Enemy</h3>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" v-bind:aria-valuenow="pvEnnemy" aria-valuemin="0" aria-valuemax="100%" :style="{width: pvEnnemy + '%'}"></div>
+    <div class="container">
+        <div v-if="pvEnnemy <= 0">
+            <img src="./assets/img/Victory.gif" alt="GG ! ">
         </div>
-    </div>
-    <br>
-    <div v-if="pvPlayer <= 0">
-        <img src="./assets/img/tumblr_m5oibh5OLX1rqfhi2o1_500.gif" alt="Looser haha !">
-    </div>
-    <div id="player" v-else>
-        <h3>Player</h3>
-        <div v-if="round % 3==0">
-            <img src="./assets/img/IMG_20220712_134509.jpg">
+        <div id="enemy" v-else>
+            <h3>Enemy</h3>
+            <img id="imgEnemy" src="./assets/img/IMG_20220712_122410.jpg">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" v-bind:aria-valuenow="pvEnnemy" aria-valuemin="0" aria-valuemax="100%" :style="{width: pvEnnemy + '%'}"></div>
+            </div>
         </div>
-        <div v-else>
-            <img src="./assets/img/IMG_20220712_122439.jpg" alt="">
+        <br>
+        <div v-if="pvPlayer <= 0">
+            <img src="./assets/img/tumblr_m5oibh5OLX1rqfhi2o1_500.gif" alt="Looser haha !">
         </div>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" v-bind:aria-valuenow="pvPlayer" aria-valuemin="0" aria-valuemax="100%" :style="{width: pvPlayer + '%'}"></div>
+        <div id="player" v-else>
+            <h3>Player</h3>
+            <div v-if="round % 3==0">
+                <img src="./assets/img/IMG_20220712_134509.jpg">
+            </div>
+            <div v-else>
+                <img src="./assets/img/IMG_20220712_122439.jpg" alt="">
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" v-bind:aria-valuenow="pvPlayer" aria-valuemin="0" aria-valuemax="100%" :style="{width: pvPlayer + '%'}"></div>
+            </div>
         </div>
     </div>
     <div v-if="pvPlayer <= 0">
