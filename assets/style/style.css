@@ -2,45 +2,6 @@
 #nom {
     text-align: center;
     font-family: pokemon solid;
-<<<<<<< HEAD
-    color: rgb(0, 89, 255);
-    background-color: yellow;
-}
-.boutton1{
-    display: flex;
-    margin-top:50px;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    
-}
-.boutton2{
-    display: flex;
-    margin-top:50px;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-}
-.boutton1 #att{
-    background-color: aqua;
-    border-radius: 1rem;
-}
-.boutton1 #attSp{
-    background-color: aqua;
-    border-radius: 1rem;
-}
-.boutton2 #soi{
-    background-color: aqua;
-    border-radius: 1rem;
-}
-.boutton2 #abd{
-    background-color: aqua;
-    border-radius: 1rem;
-}
-
-
-
-=======
     color: #2a75bb;
     background-color: #ffcb05;
     padding: 30px;
@@ -52,4 +13,39 @@
 #player {
     width: 500px;
 }
->>>>>>> 8c541719e63277754371bf96fffee89227de0d4c
+
+.boutton1 {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.boutton2 {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.boutton1 #att {
+    background-color: aqua;
+    border-radius: 1rem;
+}
+
+.boutton1 #attSp {
+    background-color: aqua;
+    border-radius: 1rem;
+}
+
+.boutton2 #soi {
+    background-color: aqua;
+    border-radius: 1rem;
+}
+
+.boutton2 #abd {
+    background-color: aqua;
+    border-radius: 1rem;
+}
