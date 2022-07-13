@@ -45,7 +45,6 @@ const app = Vue.createApp({
         giveUp() {
             location.href = "https://www.youtube.com/watch?v=QkR_5mB9UKw";
         },
-
         cacher(){
             if (this.pvPlayer<= 0) {
                 this.boutton = false;
@@ -54,6 +53,8 @@ const app = Vue.createApp({
                 this.boutton = false;
             }
         }
+
+        
     }
 });
 app.mount('#app');
