@@ -31,15 +31,16 @@
             </div>
         </div>
         <br>
-            <div v-show="boutton = true" class="boutton1">
-                <button id="att" @click="attack(calcul(5,10))"@click="cacher()">Attaquer</button>
-                <button id="att" @click="attackSp(calcul(15,30))"@click="cacher()">Attaque spéciale</button>
+        
+            <div class="boutton1" v-show="boutton == 0">
+                <button id="att" @click="attack(calcul(5,10)); cacher">Attaquer</button>
+                <button id="att" @click="attackSp(calcul(15,30)); cacher">Attaque spéciale</button>
             </div>
             <div id="versus">
                 <img src="./assets/img/versus.gif" width="100" height="100">
             </div>
-            <div v-show="boutton = true"  class="boutton2">
-                <button id="soi" @click="soinPlayer(calcul(2,20))">Soigner</button>
+            <div  class="boutton2" v-show="boutton == 0">
+                <button id="soi" @click="soinPlayer(calcul(2,20)); cacher">Soigner</button>
                 <button id="abd" @click="giveUp()">Abandonner</button>
             </div>
         <br>

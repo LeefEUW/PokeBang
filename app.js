@@ -5,7 +5,7 @@ const app = Vue.createApp({
             pvEnnemy: 100,
             pv: 0,
             round: 1,
-            boutton : true
+            boutton : 0
 
 
         };
@@ -45,16 +45,31 @@ const app = Vue.createApp({
         giveUp() {
             location.href = "https://www.youtube.com/watch?v=QkR_5mB9UKw";
         },
+        // cacher(){
+        //     console.log("coucou")
+        //     if (this.pvPlayer <= 0) {
+        //         console.log("ca marche")
+        //         location.href = "https://www.youtube.com/watch?v=NUd9kyOzqR8";
+        //     }
+        //     else if (this.pvEnnemy <= 0){
+        //         location.href = "https://www.youtube.com/watch?v=QkR_5mB9UKw";
+        //     }
+        // }
+
+        
+    },
+    computed: {
         cacher(){
-            if (this.pvPlayer<= 0) {
-                this.boutton = false;
+            
+            if (this.pvPlayer <= 0) {
+                
+                this.boutton = 1;
             }
-            else if (this.pvEnnemy<= 0){
-                this.boutton = false;
+            else if (this.pvEnnemy <= 0){
+                this.boutton = 1;;
             }
         }
 
-        
     }
 });
 app.mount('#app');
