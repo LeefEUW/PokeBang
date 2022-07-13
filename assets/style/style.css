@@ -12,6 +12,7 @@
 
 #container {
     display: flex;
+    background-color: #2a75bb;
 }
 
 #player {
@@ -30,7 +31,6 @@
 }
 
 #enemy {
-    margin-top: 20px;
     width: 90%;
     margin: auto;
     background-color: rgb(245, 207, 207);
@@ -42,35 +42,39 @@
 .boutton1 {
     display: flex;
     justify-content: center;
-    width: 100%;
-    gap: 70px;
+    gap: 100px;
 }
 
 .boutton2 {
     display: flex;
     justify-content: center;
-    width: 100%;
-    gap: 70px;
+    gap: 100px;
 }
 
-.boutton1 #att {
-    background-color: aqua;
-    border-radius: 1rem;
+.myButton {
+    box-shadow: 3px 4px 0px 0px #899599;
+    background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+    background-color: #ededed;
+    border-radius: 15px;
+    border: 1px solid #d6bcd6;
+    display: inline-block;
+    cursor: pointer;
+    color: #2a75bb;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 7px 25px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #e1e2ed;
 }
 
-.boutton1 #attSp {
-    background-color: aqua;
-    border-radius: 1rem;
+.myButton:hover {
+    background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    background-color: #bab1ba;
 }
 
-.boutton2 #soi {
-    background-color: aqua;
-    border-radius: 1rem;
-}
-
-.boutton2 #abd {
-    background-color: aqua;
-    border-radius: 1rem;
+.myButton:active {
+    position: relative;
+    top: 1px;
 }
 
 #imgEnemy {
@@ -83,4 +87,12 @@
     width: 200px;
     height: 300px;
     margin-bottom: 10px;
+}
+
+#victoire {
+    justify-content: center;
+}
+
+#loose {
+    justify-content: center;
 }

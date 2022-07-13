@@ -18,34 +18,32 @@
     </header>
     <div class="container">
         <div v-if="pvEnnemy <= 0">
-            <img src="./assets/img/Victory.gif" alt="GG ! ">
+            <img id="victoire" src="./assets/img/Victory.gif" alt="GG ! ">
         </div>
         <div id="enemy" v-else>
             <h3>Enemy</h3>
             <img id="imgEnemy" src="./assets/img/IMG_20220712_122410.jpg">
             <div class="progress">
                 <div v-if="pvEnnemy <= 15" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" v-bind:aria-valuenow="pvEnnemy" aria-valuemin="0" aria-valuemax="100%" :style="{width: pvEnnemy + '%'}"></div>
-                
                 <div v-else class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" v-bind:aria-valuenow="pvEnnemy" aria-valuemin="0" aria-valuemax="100%" :style="{width: pvEnnemy + '%'}"></div>
-                
             </div>
         </div>
         <br>
-        
-            <div class="boutton1" v-show="boutton == 0">
-                <button id="att" @click="attack(calcul(5,10)); cacher">Attaquer</button>
-                <button id="att" @click="attackSp(calcul(15,30)); cacher">Attaque spéciale</button>
-            </div>
-            <div id="versus">
-                <img src="./assets/img/versus.gif" width="100" height="100">
-            </div>
-            <div  class="boutton2" v-show="boutton == 0">
-                <button id="soi" @click="soinPlayer(calcul(2,20)); cacher">Soigner</button>
-                <button id="abd" @click="giveUp()">Abandonner</button>
-            </div>
+
+        <div class="boutton1" v-show="boutton == 0">
+            <button class="myButton" @click="attack(calcul(5,10)); cacher">Attaquer</button>
+            <button class="myButton" @click="attackSp(calcul(15,30)); cacher">Attaque spéciale</button>
+        </div>
+        <div id="versus">
+            <img src="./assets/img/versus.gif" width="50" height="50">
+        </div>
+        <div class="boutton2" v-show="boutton == 0">
+            <button class="myButton" @click="soinPlayer(calcul(2,20)); cacher">Soigner</button>
+            <button class="myButton" @click="giveUp()">Abandonner</button>
+        </div>
         <br>
         <div v-if="pvPlayer <= 0">
-            <img src="./assets/img/tumblr_m5oibh5OLX1rqfhi2o1_500.gif" alt="Looser haha !">
+            <img id="loose" src="./assets/img/tumblr_m5oibh5OLX1rqfhi2o1_500.gif" alt="Looser haha !">
         </div>
         <div id="player" v-else>
             <h3>Player</h3>
@@ -56,17 +54,18 @@
                 <img src="./assets/img/IMG_20220712_122439.jpg" alt="">
             </div>
             <div class="progress">
-                
+
                 <div v-if="pvPlayer <= 15" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" v-bind:aria-valuenow="pvPlayer" aria-valuemin="0" aria-valuemax="100%" :style="{width: pvPlayer + '%'}"></div>
-                
+
                 <div v-else class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" v-bind:aria-valuenow="pvPlayer" aria-valuemin="0" aria-valuemax="100%" :style="{width: pvPlayer + '%'}"></div>
-                
+
             </div>
         </div>
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/vue@3 "></script>
-        <script type="text/javascript" src="app.js"></script>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3 "></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
