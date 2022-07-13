@@ -10,9 +10,7 @@
     letter-spacing: 3px;
 }
 
-#player {
-    width: 500px;
-}
+#player {}
 
 .boutton1 {
     display: flex;
@@ -48,4 +46,14 @@
 .boutton2 #abd {
     background-color: aqua;
     border-radius: 1rem;
+}
+
+#imgEnemy {
+    width: 200px;
+    height: 300;
+}
+
+#player img {
+    width: 200px;
+    height: 300px;
 }
