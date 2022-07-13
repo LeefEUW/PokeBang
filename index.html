@@ -44,11 +44,8 @@
             </div>
         </div>
     </div>
-    <div v-if="pvPlayer <= 0">
-    </div>
-    <div v-else-if="pvEnemy <=0">
-    </div>
-    <div v-else>
+    
+    <div v-show="pvPlayer > 0">
         <div class="boutton1">
             <button id="att" @click="attack(calcul(5,10))">Attaquer</button>
             <button id="att" @click="attackSp(calcul(15,30))">Attaque spéciale</button>
